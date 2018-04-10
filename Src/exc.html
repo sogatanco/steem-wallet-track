@@ -1,0 +1,39 @@
+ <div class="form-group row">
+      <div class="col-xs-4">
+        <input class="form-control" id="ex1" type="text" ng-model="exchange" placeholder="bittrex">
+      </div>
+      <div class="col-xs-5">
+        <input class="form-control" id="ex2" type="text" ng-model="memo" placeholder="bd616dea5a8c4e388b3">
+      </div>
+      <div class="col-xs-3">   
+        <button ng-click="loadData()" class="btn btn-default form-control" id="ex3" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+      </div>
+    </div>
+
+
+
+
+	 <p ng-if="semua.length==0" class="text-center">Loading...</p>
+	 <div ng-if="semua.length>0">
+	 	<table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Real Time</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td ng-if="tersangka.length==0" colspan="4" class="text-center">NO HAVE DATA YET</td>
+                    <tr ng-if="tersangka.length>0" ng-repeat="x in tersangka | orderBy : '-timestamp'">
+                        <td>{{x.timestamp}}</td>
+                        <td>{{x.op[1].from}}</td>
+                        <td>{{x.op[1].amount}}</td>
+                    </tr>
+                </tbody>
+            </table>	
+	 </div>
+
+	 	
+	
+            

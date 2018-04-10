@@ -1,0 +1,10 @@
+@charset "utf-8";
+.jumbotron.text-center {
+	color: #44e817;
+	font: 400 15px/1.8 Lato, sans-serif;
+	padding-bottom:10px;
+}
+.jumbotron.text-center h3 {
+	letter-spacing: 10px;      
+    font-size: 30px;
+}
